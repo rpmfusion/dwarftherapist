@@ -1,5 +1,5 @@
 Name:           dwarftherapist
-Version:        39.2.1
+Version:        39.3.1
 Release:        1%{?dist}
 Summary:        Management tool designed to run side-by-side with Dwarf Fortress
 
@@ -115,6 +115,9 @@ sudo setcap cap_sys_ptrace=eip %{_bindir}/DwarfTherapist
 %license LICENSE.txt
 
 %changelog
+* Mon Apr 09 2018 Ben Rosser <rosser.bjr@gmail.com> - 39.3.1-1
+- Update to latest upstream release, with support for DF 0.44.09.
+
 * Wed Feb 21 2018 Ben Rosser <rosser.bjr@gmail.com> - 39.2.1-1
 - Update to new upstream release.
 - Split out /usr/share/dwarftherapist into noarch data subpackage.
