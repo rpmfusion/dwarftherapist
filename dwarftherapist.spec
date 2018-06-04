@@ -93,16 +93,11 @@ cp -p resources/img/*.xpm %{buildroot}%{_datadir}/pixmaps/
 # Remove an extra copy of the license.
 rm %{buildroot}%{_docdir}/dwarftherapist/LICENSE.txt
 
-# There used to be a link from /usr/bin/dwarftherapist -> /usr/bin/DwarfTherapist
-# (or a wrapper script or something). Create one manually.
-ln -s %{_bindir}/DwarfTherapist %{buildroot}%{_bindir}/dwarftherapist
-
 # Post install script; set cap permissions.
 %post
 sudo setcap cap_sys_ptrace=eip %{_bindir}/DwarfTherapist
 
 %files
-%{_bindir}/DwarfTherapist
 %{_bindir}/dwarftherapist
 %{_datadir}/applications/dwarftherapist.desktop
 %{_datadir}/pixmaps/dwarftherapist.*
