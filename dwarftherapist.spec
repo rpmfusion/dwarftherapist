@@ -1,5 +1,5 @@
 Name:           dwarftherapist
-Version:        41.0.2
+Version:        41.0.3
 Release:        1%{?dist}
 Summary:        Management tool designed to run side-by-side with Dwarf Fortress
 
@@ -95,7 +95,7 @@ rm %{buildroot}%{_docdir}/dwarftherapist/LICENSE.txt
 
 # Post install script; set cap permissions.
 %post
-sudo setcap cap_sys_ptrace=eip %{_bindir}/DwarfTherapist
+sudo setcap cap_sys_ptrace=eip %{_bindir}/dwarftherapist
 
 %files
 %{_bindir}/dwarftherapist
@@ -110,6 +110,9 @@ sudo setcap cap_sys_ptrace=eip %{_bindir}/DwarfTherapist
 %license LICENSE.txt
 
 %changelog
+* Tue Jan 08 2019 Ben Rosser <rosser.bjr@gmail.com> - 41.0.3-1
+- Update to latest release and fix setcap post script.
+
 * Fri Aug 10 2018 Ben Rosser <rosser.bjr@gmail.com> - 41.0.2-1
 - Updated to latest upstream release for 0.44.12.
 
