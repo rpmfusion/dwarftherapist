@@ -1,6 +1,6 @@
 Name:           dwarftherapist
-Version:        41.0.3
-Release:        4%{?dist}
+Version:        41.1.4
+Release:        1%{?dist}
 Summary:        Management tool designed to run side-by-side with Dwarf Fortress
 
 License:        MIT
@@ -110,6 +110,9 @@ sudo setcap cap_sys_ptrace=eip %{_bindir}/dwarftherapist
 %license LICENSE.txt
 
 %changelog
+* Fri Feb 28 2020 Ben Rosser <rosser.bjr@gmail.com> - 41.1.4-1
+- Updated to latest upstream release for df 0.47.03
+
 * Wed Feb 05 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 41.0.3-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
