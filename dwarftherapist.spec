@@ -1,5 +1,5 @@
 Name:           dwarftherapist
-Version:        41.1.6
+Version:        41.1.7
 Release:        1%{?dist}
 Summary:        Management tool designed to run side-by-side with Dwarf Fortress
 
@@ -110,6 +110,9 @@ sudo setcap cap_sys_ptrace=eip %{_bindir}/dwarftherapist
 %license LICENSE.txt
 
 %changelog
+* Thu Jun 18 2020 Ben Rosser <rosser.bjr@gmail.com> - 41.1.7-1
+- Update to latest upstream release.
+
 * Mon Apr 20 2020 Ben Rosser <rosser.bjr@gmail.com> - 41.1.6-1
 - Update to latest upstream release.
 
