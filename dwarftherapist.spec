@@ -1,8 +1,8 @@
 %undefine __cmake_in_source_build
 
 Name:           dwarftherapist
-Version:        41.1.7
-Release:        3%{?dist}
+Version:        41.2.1
+Release:        1%{?dist}
 Summary:        Management tool designed to run side-by-side with Dwarf Fortress
 
 License:        MIT
@@ -112,6 +112,9 @@ sudo setcap cap_sys_ptrace=eip %{_bindir}/dwarftherapist
 %license LICENSE.txt
 
 %changelog
+* Fri Mar 05 2021 Chris Collins <collins.christopher@gmail.com> - 41.2.1-1
+- Update to latest upstream release.
+
 * Thu Feb 04 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 41.1.7-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
