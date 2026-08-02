@@ -1,5 +1,3 @@
-%undefine __cmake_in_source_build
-
 Name:           dwarftherapist
 Version:        41.1.7
 Release:        13%{?dist}
@@ -10,7 +8,7 @@ URL:            https://github.com/Dwarf-Therapist/Dwarf-Therapist
 Source0:        https://github.com/Dwarf-Therapist/Dwarf-Therapist/archive/v%{version}/dwarftherapist-%{version}.tar.gz
 
 # Need cmake.
-BuildRequires:  cmake3
+BuildRequires:  cmake
 
 # Qt5 dependencies.
 BuildRequires:  qt5-qtbase-devel
@@ -78,11 +76,11 @@ package.
 dos2unix CHANGELOG.txt
 
 %build
-%cmake3
-%cmake3_build
+%cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+%cmake_build
 
 %install
-%cmake3_install
+%cmake_install
 
 # Check the desktop file.
 desktop-file-validate %{buildroot}/%{_datadir}/applications/dwarftherapist.desktop
